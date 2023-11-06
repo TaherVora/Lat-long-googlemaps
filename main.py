@@ -1,4 +1,3 @@
-#Key :AIzaSyDymHIxhSYmetn--n-e58YvXx6ESyR-W4U
 # Address: Cam. Vecinal, Parque Industrial El Florido I, 22237 Tijuana, B.C., Mexico
 import requests
 import pandas as pd
@@ -27,7 +26,7 @@ def get_route_points(api_key, origin, destination):
         print("Directions not found.")
 
 # Replace with your Google Maps API key
-api_key = "AIzaSyDymHIxhSYmetn--n-e58YvXx6ESyR-W4U"
+api_key = "*******"
 data=[]
 origin = "Cam. Vecinal, Parque Industrial El Florido I, 22237 Tijuana, B.C., Mexico"
 destination = "3225 N Harbor Dr, San Diego, CA 92101"
@@ -37,5 +36,5 @@ for lat, lng, lat1, lng1 in get_route_points(api_key, origin, destination):
     data.append({"Latitude": lat1, "Longitude": lng1})
 df = pd.DataFrame(data)
 print(df)
-df.to_csv("/Users/tahervora/Documents/routeData.csv", index=False)
+df.to_csv("routeData.csv", index=False)
 print("saved successfully.")
